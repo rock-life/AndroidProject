@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20dp"
+    android:id="@+id/text1"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintRight_toLeftOf="@id/size_font"
+    android:text="Шрифт:"
+    android:layout_margin="20dp"
+    />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="15"
+        android:textSize="20dp"
+        android:id="@+id/size_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/text1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/text_tab"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="8dp"
+        android:text="Додати розмітку для табулатури"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@id/text1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/text_notes"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <Button
+        android:id="@+id/text_notes"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Додати розмітку для нотів"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/text_tab"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Зберегти до списку:"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/text1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_notes" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text2">
+        <RadioButton
+            android:id="@+id/chord"
+            android:text="Акорди"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton
+            android:id="@+id/notes"
+            android:text="Ноти"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton
+            android:id="@+id/tab"
+            android:text="Таби"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/text3"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/rg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Додати музичний файл"
+    />
+    <TextView
+        android:id="@+id/text4"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/text3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Додати відео файл"
+        />
+    <Button
+        android:id="@+id/addMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Вибрати"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/text3"
+        app:layout_constraintTop_toBottomOf="@id/rg"
+        />
+
+    <Button
+        android:id="@+id/addVideo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Вибрати"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@id/text3"
+        app:layout_constraintTop_toBottomOf="@+id/addMusic" />
+</androidx.constraintlayout.widget.ConstraintLayout>

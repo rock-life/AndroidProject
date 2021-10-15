@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/artist"
+                android:textSize="30dp"
+                android:text="hello"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                />
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/artist"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/name"
+                android:textSize="30dp"
+                android:text="hello"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"/>
+
+            <SeekBar
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:id="@+id/seekMusic"
+                android:theme="@style/SeekBarColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/play"
+                app:layout_constraintStart_toEndOf="@+id/play"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+            <ImageButton
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/play"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/play"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+            <Button
+                android:layout_marginLeft="10dp"
+                android:id="@+id/min_ton"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:text="-"
+                android:onClick="tonDown"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/play"
+                />
+            <TextView
+                app:layout_constraintLeft_toRightOf="@+id/min_ton"
+                app:layout_constraintTop_toBottomOf="@+id/play"
+                android:id="@+id/ton"
+                android:text="тон"
+                android:textSize="20dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"/>
+
+            <Button
+                android:id="@+id/max_ton"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:text="+"
+                android:onClick="tonUp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/ton"
+                app:layout_constraintTop_toBottomOf="@+id/play"
+                android:layout_marginLeft="10dp"
+                />
+
+            <Button
+                android:onClick="minFont"
+                android:id="@+id/min_font"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:text="-"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/max_ton"
+                app:layout_constraintTop_toBottomOf="@+id/play"
+                android:layout_marginLeft="90dp"
+                />
+            <TextView
+                app:layout_constraintLeft_toRightOf="@+id/min_font"
+                app:layout_constraintTop_toBottomOf="@+id/play"
+                android:id="@+id/font"
+                android:text="шрифт"
+                android:textSize="20dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"/>
+
+            <Button
+                android:id="@+id/max_font"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:text="+"
+                android:textStyle="bold"
+                android:onClick="maxFont"
+                app:layout_constraintLeft_toRightOf="@+id/font"
+                app:layout_constraintTop_toBottomOf="@+id/play"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/min_ton"
+                android:id="@+id/text"
+                android:text="hello"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="50dp"
+        android:layout_height="270dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/speed"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:max="5"
+            android:rotation="90"
+            android:theme="@style/SeekBarColor" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:id="@+id/more"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/more" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
